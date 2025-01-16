@@ -6,6 +6,7 @@ using UnityEngine;
 public class RampBehaviour : MonoBehaviour
 {
     [SerializeField] private List<ObjectsBehaviour> objects = new List<ObjectsBehaviour>();
+    [SerializeField] private MaterialOffsetChanger materialOffsetChanger;
     private bool isProcessing = false; // Bandera para controlar el procesamiento
     private bool isBoxInTrigger = false; // Bandera para verificar si la caja está en el trigger
 
@@ -20,11 +21,13 @@ public class RampBehaviour : MonoBehaviour
             }
         }
     }
+    
 
     private void OnTriggerStay(Collider other)
     {
         BoxBehaviour boxData = other.GetComponent<BoxBehaviour>();
 
+        
         if (boxData != null)
         {
             isBoxInTrigger = true; // Registrar que la caja está en el trigger
@@ -55,15 +58,17 @@ public class RampBehaviour : MonoBehaviour
                 }
             }
 
+            int spacesAvailable = boxData.PosObjetos.Count - boxData.posicionesOcupadas.Count;
+            int objectsToMove = Mathf.Min(matchingObjects.Count, spacesAvailable);
+
             if (matchingObjects.Count > 0)
             {
-                int spacesAvailable = boxData.PosObjetos.Count;
-                int objectsToMove = Mathf.Min(matchingObjects.Count, spacesAvailable);
-
                 if (objectsToMove > 0)
                 {
                     isProcessing = true; // Marcar como procesando
+
                     StartCoroutine(MoveObjectsToBox(boxData, matchingObjects, objectsToMove));
+                    StartCoroutine(materialOffsetChanger.ChangeOffsetGradually(0.29f));
                 }
                 else
                 {
@@ -74,6 +79,20 @@ public class RampBehaviour : MonoBehaviour
             {
                 Debug.Log("No se encontraron objetos que coincidan con el nombre de la caja.");
             }
+          
+
+            if (objectsToMove > 0 && !isProcessing) // Evitar iniciar mientras ya está procesando
+            {
+                isProcessing = true; // Marcar como procesando
+                StartCoroutine(MoveObjectsToBox(boxData, matchingObjects, objectsToMove));
+                StartCoroutine(materialOffsetChanger.ChangeOffsetGradually(0.29f));
+            }
+            else if (objectsToMove == 0)
+            {
+                Debug.LogWarning("No hay suficientes posiciones disponibles en la caja o no hay objetos para mover.");
+            }
+
+
         }
     }
 
@@ -82,14 +101,14 @@ public class RampBehaviour : MonoBehaviour
         BoxBehaviour boxData = other.GetComponent<BoxBehaviour>();
         if (boxData != null)
         {
-            isBoxInTrigger = false; 
+            isBoxInTrigger = false;
             isProcessing = false;
 
             // Validar si todas las posiciones están ocupadas al salir del trigger
             if (boxData.GetNextAvailablePosition() == null)
             {
                 Debug.Log("Todas las posiciones están ocupadas al salir del trigger.");
-                StartCoroutine(boxData.HandleAllPositionsOccupied());
+                //StartCoroutine(boxData.HandleAllPositionsOccupied());
             }
         }
     }
@@ -97,10 +116,26 @@ public class RampBehaviour : MonoBehaviour
 
     private IEnumerator MoveObjectsToBox(BoxBehaviour boxData, List<ObjectsBehaviour> matchingObjects, int objectsToMove)
     {
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.05f);
 
-        for (int i = 0; i < objectsToMove; i++)
+        int movedObjects = 0; // Contador para objetos movidos
+
+        // Asegurar que el bucle itera hasta que se muevan todos los permitidos
+        for (int i = 0; i < matchingObjects.Count && movedObjects < objectsToMove; i++)
         {
+            var objBehaviour = matchingObjects[i];
+
+            Transform targetPosition = boxData.GetNextAvailablePosition();
+
+            if (targetPosition == null)
+            {
+                Debug.LogWarning("No hay más posiciones disponibles en la caja.");
+                break;
+            }
+
+            // Marcar la posición como ocupada inmediatamente
+            boxData.MarkPositionAsOccupied(targetPosition);
+
             if (!isBoxInTrigger)
             {
                 Debug.LogWarning("La caja salió del trigger. Deteniendo el movimiento.");
@@ -108,37 +143,35 @@ public class RampBehaviour : MonoBehaviour
                 yield break;
             }
 
-            GameObject obj = matchingObjects[i].gameObject;
-            Transform targetPosition = boxData.GetNextAvailablePosition();
+            GameObject obj = objBehaviour.gameObject;
 
-            if (targetPosition == null)
-            {
-                Debug.LogWarning("No hay posiciones disponibles en la caja.");
-                break;
-            }
+            float jumpHeight = 2.5f;
 
-            // Marcar la posición como ocupada inmediatamente
-            boxData.MarkPositionAsOccupied(targetPosition);
-
-            float jumpHeight = 2.0f;
-
+            // Mover el objeto
             obj.transform
-                .DOJump(targetPosition.position, jumpHeight, 1, 0.2f)
-                .SetEase(Ease.OutQuad)
+                .DOJump(targetPosition.position, jumpHeight, 1, 0.155f)
+                .SetEase(Ease.InOutSine)
                 .OnComplete(() =>
                 {
+                    SoundManager.Instance.PlayPop();
                     obj.transform.SetParent(targetPosition);
-                    Debug.Log($"Objeto {obj.name} movido a posición {targetPosition.name}.");
                 });
 
-            objects.Remove(matchingObjects[i]);
+            // Remover de la lista principal
+            objects.Remove(objBehaviour);
+            movedObjects++; // Incrementar el contador de objetos movidos
+
+            // Actualizar las posiciones de los objetos restantes en la rampa
             UpdateObjectsPositions();
 
-            yield return new WaitForSeconds(0.2f);
+            // Esperar antes de mover el siguiente objeto
+            yield return new WaitForSeconds(0.155f);
         }
 
+        // Si se movieron todos los objetos permitidos, liberar la bandera de procesamiento
         isProcessing = false;
     }
+
 
 
     private void UpdateObjectsPositions()
@@ -147,10 +180,15 @@ public class RampBehaviour : MonoBehaviour
         {
             Transform targetPosition = transform.GetChild(i);
 
+            // Reorganizar los objetos restantes en la rampa
             if (objects[i].transform.position != targetPosition.position)
             {
-                objects[i].transform.DOMove(targetPosition.position, 0.12f).SetEase(Ease.InOutQuad);
+                objects[i].transform
+                    .DOMove(targetPosition.position, 0.12f)
+                    .SetEase(Ease.InOutQuad);
             }
         }
     }
+
+
 }

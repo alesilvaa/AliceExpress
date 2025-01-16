@@ -141,6 +141,7 @@ MonoBehaviour:
   - {fileID: 4052021000467664187}
   - {fileID: 4877971637325869505}
   - {fileID: 8559855194234958937}
+  boxCover: []
 --- !u!1 &4388346427839288503
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +494,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3058789282448956579, guid: c541263cdbc7042e8a3157a568feab67, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3aae4aa19a764bb6ab3c2a427b13648, type: 2}
+    - target: {fileID: 6470337146651123837, guid: c541263cdbc7042e8a3157a568feab67, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3aae4aa19a764bb6ab3c2a427b13648, type: 2}
     - target: {fileID: 8093730781480168660, guid: c541263cdbc7042e8a3157a568feab67, type: 3}
       propertyPath: m_IsActive
       value: 0

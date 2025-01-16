@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Assets/FolderColor/Editor/CustomWindowFileImage.cs" />
     <Compile Include="Assets/FolderColor/Editor/ProjectAssetViewerCustomisation.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/Editor/PathSceneToolEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.37f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -761,9 +762,6 @@
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
     </Reference>
@@ -773,14 +771,17 @@
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
@@ -791,11 +792,17 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines.Editor">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Splines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -817,6 +824,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Splines.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -845,6 +858,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{758d6082-b5d1-2a02-8da6-b88d02733584}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreatorEditor.csproj">
+      <Project>{ed1df0ca-5ae2-1d50-b64c-e1d5da52993c}</Project>
+      <Name>PathCreatorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{2bf75a81-f66b-5464-7d36-2753a942ddfb}</Project>
+      <Name>PathCreator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

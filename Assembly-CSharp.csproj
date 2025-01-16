@@ -45,41 +45,94 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.37f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXEffectController.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/ObjectsBehaviour.cs" />
+    <Compile Include="Assets/_AliceExpress/Scripts/RampEffect.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/PathPlacer.cs" />
+    <Compile Include="Assets/_AliceExpress/Scripts/GameController.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXTarget.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXFireProjectile.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/Box.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/PathSceneTool.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/BoxBehaviour.cs" />
+    <Compile Include="Assets/_AliceExpress/Scripts/UiManager.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXSpriteBouncer.cs" />
+    <Compile Include="Assets/Epic Toon FX/Scripts/ETFXRotation.cs" />
+    <Compile Include="Assets/_AliceExpress/Scripts/MaterialOffsetChanger.cs" />
+    <Compile Include="Assets/_AliceExpress/Scripts/SoundManager.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/FollowMouseAndClickEffect.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXLoopScript.cs" />
+    <Compile Include="Assets/_AliceExpress/Scripts/SpriteRepeater.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/GridManager.cs" />
+    <Compile Include="Assets/Supercyan/Scripts/Items/AccessoryItemLogic.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/PathFollower.cs" />
+    <Compile Include="Assets/GUI PRO Kit - Casual Game/Extensions/UIParticle/UIParticleSystem.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXEffectCycler.cs" />
+    <Compile Include="Assets/GUI PRO Kit - Casual Game/Scripts/PanelControlCasualGame.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/VFX Library/ParticleEffectsLibrary.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXSceneManager.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/EventsManager.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXMouseOrbit.cs" />
+    <Compile Include="Assets/Supercyan/Scripts/Items/AccessoryObject.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/ObjectMover.cs" />
+    <Compile Include="Assets/Supercyan/Scripts/Items/ItemLogic.cs" />
+    <Compile Include="Assets/Supercyan/Scripts/Items/ItemObject.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/VFX Library/PEButtonScript.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXButtonScript.cs" />
+    <Compile Include="Assets/Epic Toon FX/Scripts/ETFXLightFade.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXEffectControllerPooled.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/RoadMeshCreator.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/VFX Library/UICanvasManager.cs" />
+    <Compile Include="Assets/Epic Toon FX/Demo/Scripts/ETFXProjectileScript.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/Objects.cs" />
+    <Compile Include="Assets/Supercyan/Scripts/Items/AccessoryLogic.cs" />
+    <Compile Include="Assets/GUI PRO Kit - Casual Game/Scripts/PanelCasualGame.cs" />
+    <Compile Include="Assets/PathCreator/Examples/Scripts/PathSpawner.cs" />
+    <Compile Include="Assets/Supercyan/Scripts/Items/ItemAnimationsObject.cs" />
+    <Compile Include="Assets/Epic Toon FX/Scripts/ETFXPitchRandomizer.cs" />
     <Compile Include="Assets/_AliceExpress/Scripts/RampBehaviour.cs" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+    <None Include="Assets/Epic Toon FX/Prefabs/Environment/Environment FX.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/Textures/square_pattern_parquet_texture_2-1K/Licence.txt" />
+    <None Include="Assets/Epic Toon FX/Prefabs/Combat/Combat FX.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/Supercyan/Shaders/SharedShaders/Legacy/CelShader.shader" />
+    <None Include="Assets/Epic Toon FX/Changelog.txt" />
+    <None Include="Assets/GUI PRO Kit - Casual Game/Extensions/UIParticle/hidden particle.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Assets/FolderColor/SaveSetUp/FolderModificationData.json" />
     <None Include="Assets/_Shaders/Skybox Gradient Shader/Licence.txt" />
+    <None Include="Assets/DavidJalbert/TinyLowPolyCars/readme.txt" />
+    <None Include="Assets/Supercyan/Shaders/SharedShaders/SupercyanShaderLighting.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets/GUI PRO Kit - Casual Game/ResourcesData/Shader &amp; Materials/UIAdditive.shader" />
     <None Include="Assets/_Content/_Sounds/Licence.txt" />
+    <None Include="Assets/Epic Toon FX/Shaders/ETFX_PowerboxLit.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/Epic Toon FX/Prefabs/Interactive/Interactive FX.txt" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/Epic Toon FX/Shaders/ETFX_PowerboxUnlit.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/Epic Toon FX/Upgrade/URP Compatibility.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
     <None Include="Assets/_Shaders/Skybox Gradient Shader/Skybox Gradient.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+    <None Include="Assets/GUI PRO Kit - Casual Game/ResourcesData/Shader &amp; Materials/MobileAdditive.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/DavidJalbert/TinyLowPolyCars/license.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
+    <None Include="Assets/Supercyan/Shaders/SharedShaders/SupercyanShader.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.37f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -729,9 +782,6 @@
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
     </Reference>
@@ -741,14 +791,17 @@
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
@@ -759,11 +812,17 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines.Editor">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Splines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -785,6 +844,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines">
+      <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.Splines.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/roshka/Documents/Alice Express/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -809,6 +874,14 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{f558cc13-e21b-e916-0a80-e95dcbcfd914}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreatorEditor.csproj">
+      <Project>{ed1df0ca-5ae2-1d50-b64c-e1d5da52993c}</Project>
+      <Name>PathCreatorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{2bf75a81-f66b-5464-7d36-2753a942ddfb}</Project>
+      <Name>PathCreator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
